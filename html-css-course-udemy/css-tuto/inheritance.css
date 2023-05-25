@@ -1,5 +1,12 @@
 /* Inheritance in CSS - the child inherits styles from parent unless the child has their own styles */
 
+/* Keep in mind: CSS - Specificity rule
+
+ie. ID > Class > Child Tag > Parent Tag > * selector
+
+etc
+*/
+
 /* Body's gonna be a parent of p's & h2 fs */
 body {
   color: red;
@@ -15,4 +22,23 @@ body {
 
 h2 {
   color: blue;
+}
+
+/* Last rule - if I change something more than once, then the last time it was changed (not chronologically but line-wise) will be the ultimate overriding */
+/* ie. Here the color will b orange even tho we set it as blue above */
+h2 {
+  color: orange;
+}
+
+/* NEW EXERCISE; given the following, try to target only the paragraph inside the container, not the other paragraph below and not the h2 in the container either */
+
+/* Soln: COMBINE THE SELECTORS!! */
+.container .text {
+  color: aqua;
+}
+
+/* Can do the same thing for example if you wanna just target the heading: */
+
+.container h2 {
+  font-size: 70px;
 }
