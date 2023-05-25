@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline, Internal | CSS Tutorial</title>
+
+    <!-- Internal CSS: Important note - this takes priority over External, but not Inline-->
+    <style>
+      /* Here, we can change all the elements with similar properties in one go, less repetitive but still has a sort of clogging of the html file */
+      /* Problem is, this doesn't translate to other pages... Also, this is not very modular cross-pages. Hence --> Use external CSSs
+      */
+      h2 {
+        color: blue;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Inline CSS: Important note - this takes priority over Internal and External-->
+    <h1 style="color: red; font-size: 50px">Hello, World!</h1>
+    <h1 style="color: red; font-size: 50px">This is long to do</h1>
+    <h1 style="color: red; font-size: 50px">Inline ain't good</h1>
+    <!-- Repetitive CSS ... -->
+
+    <h2>Trying out this h2 here...</h2>
+    <h2>Another h2</h2>
+    <h2>If I make new pages though, we're done for...</h2>
+    <h2>... Use external CSS instead!</h2>
+  </body>
+</html>

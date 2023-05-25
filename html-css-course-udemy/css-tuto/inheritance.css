@@ -1,0 +1,18 @@
+/* Inheritance in CSS - the child inherits styles from parent unless the child has their own styles */
+
+/* Body's gonna be a parent of p's & h2 fs */
+body {
+  color: red;
+  font-size: 20px;
+}
+
+/* Below, we call children of the body tags, and thus override the red instructions above */
+/* Only properties that are inherited are overwritten. If you don't change the font-size in the child tag, then obviously the font-size, if changed in the parent tag will equal the value set in the latter */
+
+.special {
+  color: green;
+}
+
+h2 {
+  color: blue;
+}

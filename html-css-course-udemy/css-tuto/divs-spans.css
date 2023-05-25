@@ -1,0 +1,17 @@
+/* DIVS AND SPANS */
+/* DIV: USED TO GROUP MULTIPLE ELEMENTS */
+/* SPAN: USED TO GROUP INLINE CONTENT */
+.red {
+  color: red;
+  background: black;
+}
+
+.green {
+  color: green;
+  background: yellow;
+}
+
+.uppercase {
+  text-transform: uppercase;
+  background-color: white;
+}

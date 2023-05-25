@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <!--sup & sub elements-->
+    <h1>We're trying out sub & sup</h1>
+    <p>Here's the 1 <sup>st</sup> example</p>
+    <h3>Mathematical notation of a recurrence:</h1>
+    <p>c<sub>n+1</sub> = c<sub>n</sub> + c<sub>n-1</sub></p>
+
+    <!--strong & em elemetns /!\ careful -> if only for styling, use CSS. These are useful for "screenreader"-->
+    <h1>Strong & em</h1>
+    <p>Lorem ipsum, <strong>dolor</strong> sit amet consectetur adipisicing elit. Sed iure nihil tempore iste, aliquam quisquam nostrum dolores ducimus laudantium vero deleniti adipisci delectus <em>dolore</em> eligendi dignissimos nam vitae suscipit debitis?</p>
+
+    <!--Special characters-->
+    <h1>Copyright &copy; &#174;</h1>
+    <p>Full list of HTML special characters can be found <a href="https://www.html.am/reference/html-special-characters.cfm" target="_blank">here.</a></p>
+
+    <!--lists-->
+    <h1>An unordered list:</h1>
+    <h2>navigation</h2>
+    <ul>
+        <li>Emma</li>
+        <ol>
+            <li>Tired</li>
+            <li>Happy</li>
+            <li>Smart</li>
+        </ol>
+        <li>Jade</li>
+        <ol>
+            <li>Dull</li>
+            <li>Awake</li>
+        </ol>
+        <li>Louise</li>
+        <ol><li>Courageous</li></ol>
+        <li>Alice</li>
+        <li>Chloé</li>
+    </ul>
+
+    <h1>Ordered list:</h1>
+    <ol>
+        <li>Boss</li>
+        <li>Chief</li>
+        <li>Leader</li>
+        <li>Bossman</li>
+    </ol>
+
+    <!--Table elements tr td th-->
+    <h1>Table elements:</h1>
+    <table>
+        <tr>
+            <th>Number</td>
+            <th>Name</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter</td>
+        </tr>
+    </table>
+
+    <!--Forms: Labels, Input Types, ...-->
+    <h1>Forms:</h1>
+    <form action="" method="">
+
+        <!--text input (label associated to input textbox)-->
+        <!--Placeholder tells users what to put without filling in anything-->
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" placeholder="Insert name here...">
+
+        <br>
+
+        <!--Password input (setting input type to password)-->
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Type your password...">
+
+        <br>
+        <!--Email input (submit input type checks if the values seem correct)-->
+        <!--Value pre-fills with something-->
+        <input type="email" name="email" value="email">
+    </form>
+
+    <!--Textarea-->
+    <h1>My Text Area</h1>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <br>
+    <br>
+    <br>
+
+    <!--Radio Buttons-->
+    <h1>Radio buttons</h1>
+    <p>Select your Favorite coding language:</p>
+    <!--The name allows you to only have one option being possibly selected-->
+    <!--if you want several values, then use checkboxes instead-->
+    <input type="radio" name="coding" id="" value="javascript"> Javascript
+    <input type="radio" name="coding" id="" value="arm-assembly"> Arm Assembly
+    <input type="radio" name="coding" id="" value="python"> Python
+    <input type="radio" name="coding" id="" value="c"> C
+    <!--You can add a checked attribute to these in order to have one option already preselected-->
+
+    <!--Checkboxes-->
+    <h1>Checkboxes</h1>
+    <p>Select your Favorite coding language(s):</p>
+    <!--Allows you to select multiple in contrast with radio buttons -->
+    <!--You can add a checked attribute to these in order to have one option already preselected-->
+    <input type="checkbox" name="programming" id="" value="javascript" checked> Javascript
+    <input type="checkbox" name="programming" id="" value="arm-assembly"> Arm Assembly
+    <input type="checkbox" name="programming" id="" value="python"> Python
+    <input type="checkbox" name="programming" id="" value="c"> C
+
+    <!--Select input (select & option dropdown style)-->
+    <h1>Select & Option</h1>
+    <select name="languages" id="">
+        <option value="javascript">Javascript</option>
+        <option value="arm-assembly">Arm Assembly</option>
+        <option value="python">Python</option>
+        <option value="c">C</option>
+    </select>
+
+
+    <!--Input submitting-->
+    <h1>Submit zone - </h1>
+    <!-- <input type="submit" value="submit here"> -->
+    <button type="submit">Submit here</button>
+
+</body>
+</html>

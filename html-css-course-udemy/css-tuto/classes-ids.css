@@ -1,0 +1,49 @@
+/* TESTING ----
+
+A CSS comment. Syntax: Selector { Property : Value ; }
+
+h1 {
+  color: blue;
+  font-size: 50px;
+}
+
+h2 {
+  color: green;
+  font-size: 25px;
+}
+p {
+  color: grey;
+}
+
+Grouping selectors: done by seperating them by commas ->
+h1,
+h2,
+p {
+  width: 75%;
+} */
+
+/* For the IDs, use #'s */
+#header-title {
+  color: green;
+  background: black;
+  font-size: 50px;
+}
+
+#footer-title {
+  color: red;
+  background: grey;
+  font-size: 50px;
+}
+
+/* For the classes, use .'s  */
+.green {
+  color: green;
+}
+.red {
+  color: red;
+  background: gray;
+}
+
+.red-subtitle-uppercase {
+  text-transform: uppercase;
+}
