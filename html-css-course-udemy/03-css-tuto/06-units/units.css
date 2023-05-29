@@ -1,0 +1,101 @@
+/* 
+--- UNITS ---
+
+Pixels: absolute values, think of one dot on the screen type thing
+Font-Size: size of the font, pretty simple
+Width: Width of an element - trivial
+Height: Height "                   "
+
+
+*/
+
+/* Units in PIXELS (FIXED) will be the same in a small screen and a big screen */
+/* h1 {
+  font-size: 60px;
+  background: blue;
+  color: white;
+  width: 400px;
+  height: 400px;
+} */
+
+/* % percentage unit/value is RELATIVE. Depends on the parent */
+/* .parent {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}
+.child {
+  width: 50%;
+  height: 50%;
+  background: red;
+} */
+
+/* EM Values: Relative; depends on parent (base value of 16px on default browser)
+1 EM = base value * number (1) ==> 16px (on default browser)
+2 EM = base value * number (2) ==> 32px (on default browser)
+..
+... */
+
+/* Normal thus that it looks the same; NOTE -- For example if you have your browser settings to large, then the text will actually change size and the relative will thus be larger than absolute. */
+/* .absolute {
+  font-size: 32px;
+}
+
+.relative {
+  font-size: 2em;
+} */
+
+/* You can also change the base value by changing the parent's value (as noted above, em's base value depends on the parent). ie, making the base value lower than the preset standard 16 will have an impact on the above: */
+/* div {
+  font-size: 10px;
+} */
+
+/* REM Values -- Relative, but on root instead of parent
+1 REM = base value (16px) * number (1)
+...And so forth */
+/* div {
+  font-size: 5px; This will not affect REM's base value 
+} */
+
+/* This will however, as HTML is the root tag*/
+/* html {
+  font-size: 10px;
+}
+.absolute {
+  font-size: 32px;
+}
+
+.relative {
+  font-size: 2rem;
+} */
+
+/* VIEWPORT UNITS ___ Relative to screen!! Very useful
+vh - height - percent of the screen
+vw - width - percent of the screen too boss */
+
+/* Get rid of default browser styles: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Note: the calc() function also exists for operations, useful for size related stuff
+You can mix and match values too, making things easier (ie.: calc(100vh - 100px)).
+*/
+
+/* Min and max heights, and overflow: */
+
+.hero {
+  background: green;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.about {
+  background: blue;
+  max-height: calc(100vh - 500px);
+  width: 54vw;
+  overflow: hidden;
+  overflow: scroll;
+}

@@ -1,0 +1,47 @@
+/* LEARNING COLOR PROPERTIES HERE: color, background-color, background */
+
+/* Background-color vs background --> background has a bit more flexibility as you can deal with the color & an image for example, whereas background-color is only useful for changing the actual color obivously */
+
+#first {
+  color: white;
+  background-color: black;
+}
+
+#second {
+  color: red;
+  background: yellow;
+}
+
+/* Instead of color names, you obv have more possibilities than the around 140 colors avail.*/
+
+/* One SOLn is : RGB 0-255 (pretty standard), ie: */
+#rgb {
+  color: rgb(90, 40, 170);
+  /* background-color: rgb(0, 0, 0); --> Black background */
+  background-color: rgb(255, 255, 255); /*White background*/
+
+  /* If you want one of R, G or B, set their value to 255 and the rest to 0 */
+}
+
+/* Also, RGBA exists (A stands for alpha) where you can set the transparency-opacity level (0-1), ie: */
+/* Note - useful as a filter over things like images, especially if you want readable text over  */
+#rgba {
+  background-color: rgba(160, 130, 50, 0.5);
+}
+
+body {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+/* Another (!shorter!) SOLn: 
+HEX values -- #RRGGBB
+
+Basically the RR is in hexadecimal so 0-255; same for GG & BB. And much shorter so its cool $$
+
+ie. --> color: #FF0000; --> fully red color.
+
+*/
+
+/* Also, VSCode enables you to hover over & select opacity/color shade you might want - pretty cool 
+
+Choosing colors can be a pain --> solution is coolors.co --> cool website with color pallette codes & basically all I would need :) */

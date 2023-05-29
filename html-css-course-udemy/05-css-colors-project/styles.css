@@ -1,0 +1,20 @@
+body {
+  background: rgba(5, 148, 230, 0.15);
+}
+
+.container {
+  background: white;
+}
+
+/* element otherelement --> targets otherelements which are within a "element" */
+div h2 {
+  color: #ec1417;
+}
+
+p {
+  color: gray;
+}
+
+#special {
+  background-color: rgba(17, 16, 16, 0.9);
+}
