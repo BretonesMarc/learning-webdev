@@ -1,0 +1,107 @@
+/* OPTION 2: IMPORT FONTS IN CSS INSTEAD OF HTML, at the very beginning of the file --- */
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&family=Trade+Winds&display=swap");
+
+/* Font-size: size of the fonts
+Font-family: font of the element */
+
+/* body {
+  font-family: Helvetica;
+}
+
+h1 {
+  font-family: Verdana;
+  font-size: 50px;
+} */
+
+/* Font stack generic family:
+serif, sans-serif, cursive, fantasy, monospace */
+
+/* Putting font-family as folows allows for the possible situation in which the browser does not manage to find the font, in which case the next font is used instead */
+/* p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/* Google fonts (fonts.google.com) is also an option. Keep in mind - more fonts you add from there, the greater your loading time */
+
+/* Some google fonts will only have regular 400, others will have many variations */
+
+/* Specifying families from google fonts: */
+
+/* body {
+  font-family: "Roboto", sans-serif;
+}
+h1 {
+  font-family: "Permanent Marker", cursive;
+} */
+/* Note about the above - if the google fonts don't load, generic ones will be ready to hop in instead  */
+
+/* Font-weight: how thick or thin characters should be
+Font-style: sets style for text */
+/* Also covering text-align & text-indent here */
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-heading {
+  font-family: "Trade Winds", cursive;
+}
+
+.sub-heading {
+  font-style: italic;
+}
+.one {
+  font-weight: bold;
+  text-align: center;
+}
+.two {
+  font-weight: lighter;
+  font-style: oblique;
+  text-indent: 3rem;
+}
+
+/* System fonts - already installed on user's device. a) faster laod times, b) less headaches, c) project will look different depending on system however */
+/* Here we've used fonts for apple, windows, android, etc */
+/* Generic fallback as per usual */
+/* as seen below: */
+/* body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+
+/* More text properties: */
+/* line-height: if number, * by font-size (relative to font size) 
+letter-spacing
+word-spacing
+text-transform
+text-decoration - capitalize --> first letter of each word. Uppercase --> all letters
+*/
+
+body {
+  line-height: 1.5; /*line spacing*/
+}
+
+a {
+  font-size: 3rem;
+  text-decoration: none; /* gets rid of the link underline! */
+}
+
+.hello-world {
+  font-size: 40px;
+  text-decoration: line-through;
+  /* line spacing will be multiplied by font-size accordingly */
+  text-transform: uppercase;
+}
+
+.three {
+  letter-spacing: 0.5rem;
+  line-height: 2.5;
+  text-decoration: overline;
+}
+
+.four {
+  word-spacing: 10px;
+}
+
+.five {
+  text-transform: capitalize;
+}
