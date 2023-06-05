@@ -1,0 +1,165 @@
+/* ELEMENTS HAVE IT SET BY DEFAULT
+BLOCK: ALways starts a new line and spans full width
+INLINE: Does not start a new lines and spans only width of content */
+
+/* Through "display", possible to change the nature of a block or an inline element */
+/* .block {
+  background: blue;
+  color: white;
+  display: inline;
+}
+
+.inline {
+  background: red;
+  color: white;
+  display: block;
+} */
+
+/* HORIZONTAL CENTERING */
+
+/* setting margin to auto for the sides will center the block element */
+/* margin-left auto will give the left margin the remaining space (set the element to the right) */
+/* Likewise, margin-right auto will give the right margin the remaining space (set the element to the left) */
+
+/* .block {
+  background: blue;
+  color: white;
+  width: 300px;
+  margin: 0.5rem auto;
+}
+
+.inline {
+  background: red;
+  color: white;
+}
+
+body {
+  text-align: center;
+} */
+
+/* The following just below does not work if the div were a span! */
+/* div {
+  background-color: blue;
+  color: white;
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 200px;
+} */
+
+/* MOBILE NAVBAR EXAMPLE
+BLOCK: Browser respects width/height, top/bottom margin
+INLINE: Browser does not respect width/height, top/bottom margin
+Navbar
+list-style-type:property
+descendant selectors
+*/
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+/* body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar li {
+  list-style-type: none;
+} */
+
+/* Prime example here of why you may want to have an inline element to be displayed as a block one! */
+/* .navbar li a {
+  color: #f15025;
+  text-decoration: none;
+  letter-spacing: 2px;
+  display: block;
+  background: #222;
+  padding: 5px;
+} */
+
+/* BOX-SIZING: border-box
+DEFAULT - content-box */
+
+/* .box-1,
+.box-2,
+.box-3 {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 1.5rem;
+} */
+
+/* Important! Padding adds to the size of a given element (around it)
+--> That's basically conent-box for you
+This is why we use box-sizing: border-box!
+--> In this case, padding gets applied within the element (inside it)
+
+*/
+/*
+.box-1 {
+  background: red;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.box-2 {
+  background: blue;
+}
+
+ .box-3 {
+  background: green; 
+  padding: 20px;
+}*/
+/*
+TIP: in the "*" selector, set box-sizing: border-box; to avoid having to set it for each element and have everything work as expected
+*/
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* DISPLAY INLINE-BLOCK --> does not start a new line, browser respects margin, width, height */
+
+/* What if we still want all our elements on the same line but we want them centered? --> Then display block is problematic
+Solution --> Use display inline-block! */
+/* a {
+  font-size: 1.5rem;
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  margin: 40px 10px;
+  display: inline-block;
+} */
+
+/* Display:none - remove from the flow, hide element, collapse the space
+opacity:0, visibility:hidden - hides element preserves the space */
+div {
+  background: #f15025;
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.none {
+  display: none;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+.opacity-5 {
+  opacity: 0.5;
+}
+.opacity-0 {
+  opacity: 0;
+}
+
+.visibility {
+  visibility: visible;
+}
+
+/* Difference between visibility and display?
+Display: none actually removes element --> The element is hidden but the space collapses.
+Visibility: hidden --> The element is actually still there (although hidden) but the space is preserved for example */
