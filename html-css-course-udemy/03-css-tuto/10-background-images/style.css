@@ -1,0 +1,204 @@
+/* div {
+  height: 300px;
+  color: yellow;
+} */
+
+/* 
+
+If the image is too small, such that it doesn't cover the entire div (vertical or horiz), then it will simply start to repeat itself.
+
+This stems from the background-repeat property, which is set to repeat by default.
+
+Background repeat can have repeat, no-repeat, repeat-x (horizontal), repeat-y (vertical) as values.
+
+There is also the space value in background-repeat, which will repeat the image, but will also add space between the images.
+*/
+/* background-size is a property which adjusts the size of the image; cover is used below, and makes the image fit the entire size of the div itself. Keeps the ratio of the image, so the width will span parfectly, but the height might be cutoff  */
+/* background-position: self explanatory */
+
+/* .big-img {
+  background: url("./big.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+/* Below, we don't want background-size as cover because the image is very small, and this will compeletely distort what it looks like if we make it span the entire div. */
+/* .small-img {
+  background: url("./small.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+/* Contain on the other hand will keep the ratio of the ilmage still, however it will make sure the the full image actually fits in the container/designated area; instead of ensuring it will simply span across the width and not necessarily fit height-wise */
+/* .folder-img {
+  background: url("./images/folder-img.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 20% 50%;
+} */
+
+/* ____________________
+   ... NEW SECTION ... 
+   ____________________
+*/
+
+/* background-attachment */
+/* background-attachment:fixed will make the image stay in place, even if you scroll down the page. */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  min-height: 100vh;
+  color: white;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.big-img {
+  background: url("./big.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.small-img {
+  background: url("./images/folder-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.folder-img {
+  background: url("./big.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+/* ____________________
+   ... NEW SECTION ... 
+   Linear Gradient; this is a background image, but it's not an image file, it's a CSS property. background: linear-gradient(red, purple); for example will create a gradient from red to purple, top to bottom (default).
+   To right for example will make it go from left to right. Degrees can also be used to indicate direction.
+   ____________________
+*/
+
+/* * {
+  border: 2px solid red;
+}
+div {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
+}
+
+.one {
+  background: linear-gradient(red, purple);
+}
+
+.two {
+  background: linear-gradient(to right, red, purple, blue);
+}
+
+.three {
+  background: linear-gradient(300deg, cyan, lightgreen, yellow);
+}
+.four {
+  background: linear-gradient(to top right, cyan, lightgreen, yellow);
+}
+.five {
+  background: linear-gradient(gold 20%, silver);
+}
+.six {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
+} */
+
+/* ____________________
+   ... NEW SECTION ... 
+   Background Image Overlay
+   The background property can have both linear gradient and image, and the gradient can be on top of the image. With rgba, you can set transparency to the color, and this can be used to create an overlay effect.
+   ____________________
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  min-height: 100vh;
+  color: white;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.big-img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./big.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Text above should become much more readable as opposed to text in front of the same image, without overlay, below. */
+
+.folder-img {
+  background: url("./big.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Again, overlay:  */
+/* ALso, possible to combine the repeat, size and position? --> Yes, there's a shrt-hand. You can attach the values @ the end of the url.
+
+ie. order --> background: linear-gradient(...), url(...) center/cover no-repeat fixed; */
+.small-img {
+  background: linear-gradient(
+      to top,
+      rgba(244, 5, 5, 0.3),
+      rgba(255, 100, 239, 0.5)
+    ),
+    url("./images/folder-img.jpg") center/cover no-repeat fixed;
+}
+
+/* Tip: use colorzilla online to vizualize & pick the linear-gradient you might want to use */
+
+.colorzilla {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+  background: #f0b7a1; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #f0b7a1 0%,
+    #8c3310 50%,
+    #752201 51%,
+    #bf6e4e 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #f0b7a1 0%,
+    #8c3310 50%,
+    #752201 51%,
+    #bf6e4e 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #f0b7a1 0%,
+    #8c3310 50%,
+    #752201 51%,
+    #bf6e4e 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 ); /* IE6-9 */
+}
