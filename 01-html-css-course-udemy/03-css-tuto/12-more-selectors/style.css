@@ -31,16 +31,91 @@ p {
 */
 
 /* Any descendant (doesn't have to be direct child) of a div that is a heading 1: */
-div h1 {
+/* div h1 {
   color: red;
-}
+} */
 
 /* So how do we select a direct child? */
 /* In the following, the h1's that are direct children stay purple as .header is more specific than div, so last rule doesn't apply */
-/* Voila: */
-.header > h1 {
+/* Voilà : */
+/* .header > h1 {
   color: purple;
 }
 div > h1 {
   color: blue;
+} */
+
+/* ________________________
+SECTION 3: FIRST-LINE & FIRST-LETTER SELECTORS
+... self-explanatory ngl
+________________________
+*/
+/* 
+p::first-line {
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+}
+p::first-letter {
+  color: blue;
+  font-size: 60px;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+} */
+
+/* ________________________
+SECTION 4: HOVER & LINK & ROOT PSUEDO-CLASS SELECTOR
+:link --> unvisited links with href attribute
+:visited --> visited links
+:hover --> hover
+:active --> as you click on it
+a --> all links
+
+:root --> selects the root element of the document (html)
+________________________
+*/
+
+/* div:hover {
+  background-color: red;
+  color: white;
+}
+
+.header:hover {
+  background-color: blue;
+  color: white;
+  text-transform: uppercase;
+} */
+
+/* a:hover {
+  color: red;
+  text-decoration: none;
+} */
+
+a {
+  display: block;
+  background: red;
+  margin: 10px;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: green;
+}
+
+a:active {
+  color: yellow;
+}
+
+:root {
+  font-size: 10px;
+}
+
+.absolute {
+  font-size: 24px;
+}
+.relative {
+  font-size: 1.5rem;
 }
