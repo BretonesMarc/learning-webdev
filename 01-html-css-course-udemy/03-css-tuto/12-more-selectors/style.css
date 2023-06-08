@@ -1,0 +1,46 @@
+/* ________________________
+   SECTION 1: BASIC SELECTORS
+   Practice with familiar ones
+   ________________________
+*/
+
+/* 
+* {
+  color: red;
+}
+
+#heading {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: blue;
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  color: green;
+}
+
+p {
+  letter-spacing: 5px;
+} */
+
+/* ________________________
+   SECTION 2: DESCENDANT & CHILD SELECTORS
+   ________________________
+*/
+
+/* Any descendant (doesn't have to be direct child) of a div that is a heading 1: */
+div h1 {
+  color: red;
+}
+
+/* So how do we select a direct child? */
+/* In the following, the h1's that are direct children stay purple as .header is more specific than div, so last rule doesn't apply */
+/* Voila: */
+.header > h1 {
+  color: purple;
+}
+div > h1 {
+  color: blue;
+}
