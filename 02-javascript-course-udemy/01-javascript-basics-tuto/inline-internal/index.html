@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Internal | JS</title>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <a href="./about.html"><p>about</p> </a>
+    <!-- INLINE JS: -->
+    <!-- <button onclick="alert('hello world')">click me</button> -->
+    <!-- ... Redundant obviously -->
+
+    <button class="btn">hello world</button
+    ><button class="btn">hello world</button
+    ><button class="btn">hello world</button
+    ><button class="btn">hello world</button
+    ><button class="btn">hello world</button
+    ><button class="btn">hello world</button
+    ><button class="btn">hello world</button>
+    <!-- INTERNAL JS: -->
+    <!-- <script>
+      document.querySelectorAll(".btn").forEach((item) => {
+        item.addEventListener("click", () => {
+          alert("hello world");
+        });
+      });
+    </script> -->
+    <!-- ... Still less good than external JS, for ie. what if we have many pages? About page for example... -->
+  </body>
+</html>
