@@ -1,0 +1,418 @@
+/* ________________________
+   SECTION 1: FLOAT & CLEAR
+   Float and Clear properties
+   ________________________
+*/
+
+/* * {
+  border: 2px solid red;
+}
+.banner {
+  padding: 10px;
+} */
+
+/* Float: left --> this will change the flow of the image, put the image left and the following elements will be put next to it */
+/* .one {
+  float: left;
+}
+
+.two {
+  float: right;
+  height: 40px;
+} */
+
+/* Clear: right, left, or both --> this will clear the float, so the following elements will be put below the elements which have float property set as the same as the clear */
+/* p {
+  clear: right;
+} */
+
+/* ________________________
+   SECTION 2: FLOAT PROPERTY COLUMN LAYOUT EXAMPLE
+   Column layout example covered below
+   As seen below, by floating our divs to a direction by a specific %age (100/#divs) then we can have them be put side by side on the screen
+   ________________________
+*/
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 200px;
+  width: 33.33%;
+  float: right;
+}
+
+.one {
+  background: green;
+}
+.two {
+  background: blue;
+}
+.three {
+  background: yellow;
+}
+.four {
+  background: red;
+} */
+/* careful! if the entire line has not been completely been filled, and some other content succeeds it, then it will be put next to the last div. To avoid that, don't forget to use clear.  */
+
+/* h1 {
+  clear: both;
+} */
+
+/* ______________________________________
+   SECTION 3: POSITION STATIC & RELATIVE
+   position:static - default, always positioned according to the normal flow of the page
+   position:relative - positioned relative to its normal position
+   top, bottom, left, right - used with position:relative to position the element, withouth affecting other elements
+   _____________________________________
+*/
+
+/* div {
+  border: 2px solid red;
+  background: yellow;
+  margin-top: 40px;
+}
+
+.one {
+  background: blue;
+  color: white;
+  position: static;
+} */
+
+/* example with position relative, when we use bottom:2rem, the element will be moved 2rem from the bottom of its normal position (not in the direction of the bottom), but the other elements will not be affected.
+ */
+
+/* .two {
+  background: green;
+  color: white;
+  position: relative;
+  bottom: 2rem;
+  right: 20%;
+} */
+
+/* difference between position relative and position absolute: relative will move the element from its normal position, but the other elements will not be affected. Absolute will move the element from its normal position, and the other elements will be affected. */
+
+/* ____________________________________
+   SECTION 4: POSITION ABSOLUTE 
+   position:absolute - positioned relative to the nearest absolute ancestor. If there is no absolute ancestor, it will be positioned relative to the initial containing block (the <html> element).
+   ___________________________________
+*/
+
+/* div {
+  border: 2px solid red;
+  background: yellow;
+  margin-top: 40px;
+}
+
+.one {
+  background: blue;
+  color: white;
+}
+
+.two {
+  background: green;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.special {
+  background: pink;
+  font-size: 20px;
+  color: #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  min-height: 100vh;
+  background: blue;
+} */
+
+/* ____________________________________
+    SECTION 4: POSITION FIXED 
+    position:fixed - positioned relative to the viewport (screen), stays in the same place even if the page is scrolled. Will use other content to fill the space. Example of when to use: navigation bar. 
+    top, bottom, left, right - used with position:fixed to position the element, withouth affecting other elements
+
+    ___________________________________
+*/
+
+/* .nav {
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: fixed;
+  margin-top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+div {
+  border: 2px solid red;
+  background: yellow;
+  margin-top: 40px;
+}
+
+.one {
+  background: blue;
+  color: white;
+}
+
+.two {
+  background: green;
+  color: white;
+}
+.special {
+  background: pink;
+  font-size: 20px;
+  color: #222;
+}
+
+.container {
+  min-height: 100vh;
+  background: blue;
+} */
+
+/* ____________________________________
+    SECTION 5: POSITION STICKY 
+    position:sticky - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place
+    use at least one of the values: top, right, bottom, left
+    ___________________________________
+*/
+
+/* .nav {
+    background: red;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    position: sticky;
+    margin-top: 0;
+    top: 100px;
+    width: 100%;
+}
+div {
+    border: 2px solid red;
+    background: yellow;
+    margin-top: 40px;
+}
+
+.one {
+    background: blue;
+    color: white;
+}
+
+.two {
+    background: green;
+    color: white;
+}
+.special {
+    background: pink;
+    font-size: 20px;
+    color: #222;
+}
+
+.container {
+    min-height: 300vh;
+    background: blue;
+} */
+
+/* ____________________________________
+    SECTION 6: MEDIA QUERIES
+    Responsive design: the ability to adapt to the environment (screen size, device, etc)
+    min-width --> starting from this width, the following styles will be applied
+    max-width --> up to this width, the following styles will be applied
+    Mobile first convention: we start with the mobile styles, and then we add the media queries for the larger screens
+    ___________________________________
+*/
+
+/* body {
+  background: yellow;
+}
+
+.banner {
+  background: blue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+} */
+/* Note: the following "@media screen and (min-width: 576px)" must be written exactly like this, no extra/missing spaces, otherwise it will not work
+ */
+/* @media screen and (min-width: 40rem) {
+  body {
+    background: aqua;
+  }
+  .banner {
+    margin-top: 60px;
+    background: yellow;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 70rem) {
+  body {
+    background: red;
+  }
+  .banner {
+    margin-top: 60px;
+    background: magenta;
+  }
+  h1 {
+    color: black;
+    font-size: 60px;
+  }
+} */
+
+/* ____________________________________
+    SECTION 7: Z-INDEX
+    The last element in the HTML is on top of the other elements. If we want to change this, we can use z-index. The higher the z-index, the higher the element will be on the page.
+    0 - default
+    Does not work on static elements
+    ___________________________________
+*/
+
+/* img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+
+.banner {
+  margin: 20px;
+  width: 80vw;
+  height: 70vh;
+  border: 5px solid green;
+  position: relative;
+}
+
+.one {
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.two {
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+}
+.three {
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+} */
+
+/* ____________________________________
+    SECTION 8: ::before ::after pseudo elements creates element and inserts it before or after the content of the selected element
+    content:'' - must be used with ::before and ::after
+    img --- does not work with img
+    ___________________________________
+*/
+
+/* p::before {
+  content: "hello";
+  display: block;
+  background: yellow;
+  font-weight: bold;
+  font-size: 2rem;
+  color: red;
+}
+p::after {
+  content: "after";
+  display: block;
+  background: yellow;
+  font-weight: bold;
+  font-size: 1rem;
+  color: red;
+} */
+
+/* PSEUDO-ELEMENTS EXAMPLE */
+
+/* * {
+  border: 2px solid red;
+} */
+/* div {
+  width: 70vw;
+  margin: 100px auto;
+  position: relative;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+div::before {
+  content: "";
+  border: 2px solid gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -40px;
+  left: -40px;
+  z-index: -2;
+  transition: all 0.5s linear;
+}
+div::after {
+  content: "";
+  background-color: rgba(128, 128, 128, 0.65);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  top: -20px;
+  left: -20px;
+  z-index: -1;
+  transition: all 0.5s linear;
+}
+div:hover::after,
+div:hover::before {
+  top: 0;
+  left: 0;
+} */
+
+/* ____________________________________
+    SECTION 9: INSET PROPERTY
+    shorthand for top, right, bottom, left
+    ___________________________________
+*/
+* {
+  margin: 0;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  background: orange;
+  margin-bottom: 1rem;
+}
+
+.special {
+  position: relative;
+}
+.special h1 {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* Instead of all this above, there's a shorthand: */
+  inset: 0 0 0 0;
+
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: white;
+}
