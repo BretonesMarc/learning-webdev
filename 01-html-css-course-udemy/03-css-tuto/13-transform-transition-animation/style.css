@@ -1,0 +1,282 @@
+/* 
+_____________________
+SECTION 1 - TRANSFORM
+_____________________
+transform: translate(),scale(),rotate(),skew()
+*/
+
+/* TRANSLATE: */
+
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: translate(100px, 100px);
+}
+.two {
+  background: blue;
+  transform: translateX(100px);
+}
+.three {
+  background: green;
+  transform: translateY(33%);
+} */
+
+/* * {
+  margin: 0;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+} */
+
+/* Properly targeting the hero-center to actually be in the center through transform, instead of having the top left edge of the hero-center in the center! */
+/* .hero-center {
+  border: 2px solid red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* SCALE: */
+
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: scaleX(2);
+}
+.two {
+  background: blue;
+  transform: scaleY(0.5);
+}
+.three {
+  background: green;
+  transform: scale(0.5, 2);
+} */
+
+/* ROTATE: */
+
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: rotateZ(-45deg);
+}
+.two {
+  background: blue;
+  transform: rotate(45deg);
+}
+.three {
+  background: green;
+  transform: rotateX(45deg);
+} */
+
+/* SKEW: */
+
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+  transform: skewX(45deg);
+}
+.two {
+  background: blue;
+  transform: skewY(45deg);
+}
+.three {
+  background: green;
+  transform: skew(40deg, 30deg);
+} */
+
+/* 
+_____________________
+SECTION 2 - TRANSISTION
+change over time
+transition-property: ; transition-duration: ;
+transition-delay: ; 
+short-hand: transition: property duration delay, property duration delay, ...;
+IF duration and delay are the same for all properties, you can use the short-hand:
+transition: all duration delay;
+_____________________
+*/
+
+/* div {
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.one {
+  background: red;
+}
+.two {
+  background: blue;
+}
+.three {
+  background: green;
+  transition-property: background, border-radius;
+  transition-duration: 2s, 1s;
+  transition-delay: 200ms;
+
+  transition: background 2s 200ms, border-radius 1s 2s;
+  transition: all 2s 200ms;
+}
+
+.three:hover {
+  border-radius: 50%;
+  background: coral;
+  transform: scale(1.1);
+} */
+
+/* TRANSITION TIMING FUNCTION
+Controls how the transition happens over time, not how long it takes
+transition-timing-function: ease (default - slow start, fast, slow end), linear (same speed start to end), ease-in (slow start), ease-out (slow end), ease-in-out (slow start, fast, slow end), etc...
+*/
+/* 
+div {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  font-size: 20px;
+  color: white;
+  margin: 5px;
+  transition: all 1s;
+}
+
+div:hover {
+  transform: translateX(100px);
+}
+
+.ease {
+  transition-timing-function: ease;
+}
+.linear {
+  transition-timing-function: linear;
+}
+.ease-in {
+  transition-timing-function: ease-in;
+}
+.ease-out {
+  transition-timing-function: ease-out;
+}
+.ease-in-out {
+  transition-timing-function: ease-in-out;
+} */
+
+/* 
+_____________________
+SECTION 2 - ANIMATION
+difference transition vs. animation - animation gives more options
+Transition: two states - start and end
+Animation: multiple states - 0%, 1%, 2%, ..., 20%, ..., 100%
+_____________________
+*/
+
+/* div {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+}
+
+.transition {
+  background: red;
+  transition: all 1s linear;
+}
+
+.transition:hover {
+  background: aqua;
+  transform: translateX(100px);
+} */
+
+/* ... VS ...  */
+/* With shorthand at the end of course */
+/* .animation {
+  background: blue;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: 3;
+
+  animation: move 3s infinite;
+} */
+
+/* Use keyframes and name it, one that you'll use to access that keyframe later on */
+/* @keyframes move {
+  0% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(100px);
+    background: red;
+  }
+  75% {
+    transform: translateX(-200px);
+    background: aqua;
+  }
+
+  100% {
+    transform: translateX(20px);
+    background: green;
+  }
+} */
+/* ______________________ */
+/* Animation-fill-mode: what values are applied by the animation outside of the time it is executing */
+/* _____________________ */
+
+div {
+  width: 200px;
+  height: 100px;
+  color: white;
+  margin: 10px;
+  opacity: 0;
+}
+
+/* ... VS ...  */
+/* With shorthand at the end of course */
+.animation {
+  background: blue;
+  animation: move 5s 2;
+  animation-fill-mode: forwards;
+}
+
+/* Use keyframes and name it, one that you'll use to access that keyframe later on */
+@keyframes move {
+  0% {
+    opacity: 0.1;
+  }
+  25% {
+    transform: translateX(200px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(-100px);
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translateX(20px);
+    opacity: 1;
+  }
+}
